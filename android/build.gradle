@@ -9,7 +9,7 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:8.2.2'
+        classpath 'com.android.tools.build:gradle:7.4.2'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
@@ -32,7 +32,9 @@ android {
         main.java.srcDirs += 'src/main/kotlin'
     }
     defaultConfig {
+        applicationId "com.chihimng.is_lock_screen"
         compileSdkVersion 16
+        multiDexEnabled true
     }
     lintOptions {
         disable 'InvalidPackage'
