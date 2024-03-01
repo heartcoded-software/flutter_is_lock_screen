@@ -25,8 +25,8 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
 android {
-    compileSdkVersion 28
-    namespace('com.chihimng.is_lock_screen')
+    compileSdkVersion 33
+    namespace 'com.chihimng.is_lock_screen'
 
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
