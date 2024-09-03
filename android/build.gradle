@@ -1,15 +1,15 @@
 group 'com.chihimng.is_lock_screen'
-version '2.0.0'
+version '2.0.2'
 
 buildscript {
-    ext.kotlin_version = '1.9.22'
+    ext.kotlin_version = '1.8.10'
     repositories {
         google()
         jcenter()
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:8.2.2'
+        classpath 'com.android.tools.build:gradle:7.4.0'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
@@ -25,16 +25,13 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
 android {
-    compileSdkVersion 33
-    namespace 'com.chihimng.is_lock_screen'
+    compileSdkVersion 28
 
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
     }
     defaultConfig {
-        applicationId "com.chihimng.is_lock_screen"
-        compileSdkVersion 16
-        multiDexEnabled true
+        minSdkVersion 16
     }
     lintOptions {
         disable 'InvalidPackage'
