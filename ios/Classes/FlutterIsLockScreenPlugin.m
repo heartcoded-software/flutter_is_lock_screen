@@ -1,4 +1,4 @@
-#import "IsLockScreenPlugin.h"
+#import "FlutterIsLockScreenPlugin.h"
 #if __has_include(<is_lock_screen/is_lock_screen-Swift.h>)
 #import <is_lock_screen/is_lock_screen-Swift.h>
 #else
@@ -8,8 +8,8 @@
 #import "is_lock_screen-Swift.h"
 #endif
 
-@implementation IsLockScreenPlugin
+@implementation FlutterIsLockScreenPlugin
 + (void)registerWithRegistrar:(NSObject<FlutterPluginRegistrar>*)registrar {
-  [SwiftIsLockScreenPlugin registerWithRegistrar:registrar];
+  [FlutterIsLockScreenPlugin registerWithRegistrar:registrar];
 }
 @end

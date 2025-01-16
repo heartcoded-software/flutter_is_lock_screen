@@ -1,1 +1,12 @@
-rootProject.name = 'is_lock_screen'
+rootProject.name = 'flutter_is_lock_screen'
+
+dependencyResolutionManagement {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:8.6.1"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}

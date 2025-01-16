@@ -1,11 +1,11 @@
-name: is_lock_screen
-description: Detects if device is in lock screen. Useful for determining whether app entered background due to locking screen or leaving app.
-version: 2.0.2
-repository: https://github.com/chihimng/flutter_is_lock_screen
+name: flutter_is_lock_screen
+description: "Detects if device is in lock screen. Useful for determining whether app entered background due to locking screen or leaving app."
+version: 3.0.0
+repository: https://github.com/heartcoded-software/flutter_is_lock_screen
 
 environment:
   sdk: '>=3.0.2 <4.0.0'
-  flutter: 3.22.2
+  flutter: '>=3.22.2'
 
 dependencies:
   flutter:
@@ -14,18 +14,13 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
   flutter_lints: 4.0.0
 
-# For information on the generic Dart part of this file, see the
-# following page: https://dart.dev/tools/pub/pubspec
-
-# The following section is specific to Flutter.
 flutter:
   plugin:
     platforms:
       android:
-        package: com.chihimng.is_lock_screen
-        pluginClass: IsLockScreenPlugin
+        package: de.heartcoded.flutter_is_lock_screen
+        pluginClass: FlutterIsLockScreenPlugin
       ios:
-        pluginClass: IsLockScreenPlugin
+        pluginClass: FlutterIsLockScreenPlugin

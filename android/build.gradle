@@ -1,43 +1,45 @@
-group 'com.chihimng.is_lock_screen'
-version '2.0.2'
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+}
 
-buildscript {
-    ext.kotlin_version = '1.8.10'
-    repositories {
-        google()
-        jcenter()
+group = "de.heartcoded.flutter_is_lock_screen"
+version = "3.0.0"
+
+android {
+    namespace = "de.heartcoded.flutter_is_lock_screen"
+
+    compileSdk = 34
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+
+    sourceSets {
+        main.java.srcDirs += "src/main/kotlin"
+        test.java.srcDirs += "src/test/kotlin"
+    }
+
+    defaultConfig {
+        minSdk = 21
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:7.4.0'
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        testImplementation("org.jetbrains.kotlin:kotlin-test")
+        testImplementation("org.mockito:mockito-core:5.0.0")
     }
-}
 
-rootProject.allprojects {
-    repositories {
-        google()
-        mavenCentral()
+    testOptions {
+        unitTests.all {
+            useJUnitPlatform()
+            testLogging {
+               events "passed", "skipped", "failed", "standardOut", "standardError"
+            }
+        }
     }
-}
-
-apply plugin: 'com.android.library'
-apply plugin: 'kotlin-android'
-
-android {
-    compileSdkVersion 28
-
-    sourceSets {
-        main.java.srcDirs += 'src/main/kotlin'
-    }
-    defaultConfig {
-        minSdkVersion 16
-    }
-    lintOptions {
-        disable 'InvalidPackage'
-    }
-}
-
-dependencies {
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 }

@@ -1,0 +1,49 @@
+{
+  "lockFileMaintenance": {
+    "enabled": false
+  },
+  "packageRules": [
+    {
+      "groupName": "all dependencies (minor)",
+      "groupSlug": "minor all",
+      "matchPackagePatterns": [
+        "*"
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ]
+    },
+    {
+      "groupName": "all dependencies",
+      "groupSlug": "all",
+      "matchPackagePatterns": [
+        "*"
+      ],
+      "matchUpdateTypes": [
+        "major"
+      ]
+    },
+    {
+      "groupName": "gradle (blocked)",
+      "groupSlug": "gradle",
+      "matchPackagePatterns": [
+        "gradle"
+      ]
+    },
+    {
+      "groupName": "uuid (blocked)",
+      "groupSlug": "uuid",
+      "matchPackagePatterns": [
+        "uuid"
+      ]
+    },
+    {
+      "groupName": "android_alarm_manager_plus (blocked)",
+      "groupSlug": "android_alarm_manager_plus",
+      "matchPackagePatterns": [
+        "android_alarm_manager_plus"
+      ]
+    }
+  ]
+}

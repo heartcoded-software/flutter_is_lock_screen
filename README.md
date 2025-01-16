@@ -34,4 +34,4 @@ An alternative to this plugin is [hardware_buttons](https://pub.dev/packages/har
 
 To circumvent this issue, this plugin detects whether iOS device is in lock screen by checking if screen brightness is 0.0 (the user-adjustable minimum is >0.01).
 
-On android, this plugin uses `KeyguardManager` and `PowerManager` API to check if device is secured or display is off as suggested [in this gist](https://gist.github.com/Jeevuz/4ec01688083670b1f3f92af64e44c112). A similar flow was tested on iOS with `LocalAuthentication` and `UIApplication.shared.isProtectedDataAvailable` but failed due to long grace period of the system lock down. The flag always return true the moment screen is locked.
+On android, this plugin uses `KeyguardManager` and `PowerManager` API to check if device is secured or display is off as suggested [in this gist](https://gist.github.com/Jeevuz/4ec01688083670b1f3f92af64e44c112). A similar flow was tested on iOS with `LocalAuthentication` and `UIApplication.sharedFlutterIsLockScreenPluginProtectedDataAvailable` but failed due to long grace period of the system lock down. The flag always return true the moment screen is locked.
