@@ -1,6 +1,6 @@
 name: flutter_is_lock_screen
 description: "Detects if device is in lock screen. Useful for determining whether app entered background due to locking screen or leaving app."
-version: 3.0.0
+version: 3.0.2
 repository: https://github.com/heartcoded-software/flutter_is_lock_screen
 
 environment:

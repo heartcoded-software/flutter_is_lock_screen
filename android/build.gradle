@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "de.heartcoded.flutter_is_lock_screen"
-version = "3.0.0"
+version = "3.0.2"
 
 android {
     namespace = "de.heartcoded.flutter_is_lock_screen"
