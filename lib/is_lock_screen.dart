@@ -11,3 +11,8 @@ Future<bool?> isLockScreen() async {
     return null;
   }
 }
+
+  Future<String?> getPlatformVersion() async {
+    final version = await _channel.invokeMethod<String>('getPlatformVersion');
+    return version;
+  }
