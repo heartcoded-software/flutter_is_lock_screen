@@ -12,6 +12,8 @@ public class FlutterIsLockScreenPlugin: NSObject, FlutterPlugin {
         switch (call.method) {
         case "isLockScreen":
             return result(UIScreen.main.brightness == 0.0)
+        case "getPlatformVersion":
+            return result("iOS " + UIDevice.current.systemVersion)
         default:
             return result(FlutterMethodNotImplemented)
         }
