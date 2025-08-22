@@ -1,4 +1,4 @@
-library is_lock_screen;
+library;
 
 import 'package:flutter/services.dart';
 

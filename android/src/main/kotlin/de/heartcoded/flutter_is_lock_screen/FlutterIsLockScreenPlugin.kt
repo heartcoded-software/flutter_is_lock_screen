@@ -12,7 +12,7 @@ import io.flutter.plugin.common.MethodCall
 import io.flutter.plugin.common.MethodChannel
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler
 import io.flutter.plugin.common.MethodChannel.Result
-import io.flutter.plugin.common.PluginRegistry.Registrar
+// import io.flutter.plugin.common.PluginRegistry.Registrar
 
 /** FlutterIsLockScreenPlugin */
 class FlutterIsLockScreenPlugin(val registrarContext: Context? = null): FlutterPlugin, MethodCallHandler {
@@ -39,6 +39,7 @@ class FlutterIsLockScreenPlugin(val registrarContext: Context? = null): FlutterP
   // them functionally equivalent. Only one of onAttachedToEngine or registerWith will be called
   // depending on the user's project. onAttachedToEngine or registerWith must both be defined
   // in the same class.
+  /* commented out because of incompatibillity with newer Flutter versions
   companion object {
     @JvmStatic
     fun registerWith(registrar: Registrar) {
@@ -46,6 +47,7 @@ class FlutterIsLockScreenPlugin(val registrarContext: Context? = null): FlutterP
       channel.setMethodCallHandler(FlutterIsLockScreenPlugin(registrarContext = registrar.activeContext()))
     }
   }
+   */
 
   override fun onMethodCall(@NonNull call: MethodCall, @NonNull result: Result) {
     when (call.method) {
